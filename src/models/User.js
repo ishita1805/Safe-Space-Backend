@@ -36,10 +36,6 @@ const User = db.define('Users', {
     type: Sequelize.STRING,
     allowNull: true,
   },
-  mood: {
-    type: Sequelize.INTEGER,
-    allowNull: true,
-  },
   photo: {
     type: Sequelize.STRING,
     allowNull: true,

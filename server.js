@@ -14,6 +14,7 @@ const io = require('socket.io')(http);
 const UserRoutes = require('./src/router/User');
 const JournalRoutes = require('./src/router/Journal');
 const SignRoutes = require('./src/router/Sign');
+const PostRoutes = require('./src/router/Post');
 
 app.use(cookieParser());
 app.use(morgan('dev'));
@@ -24,6 +25,7 @@ app.use(cors());
 app.use('/user', UserRoutes);
 app.use('/journal',JournalRoutes);
 app.use('/sign',SignRoutes);
+app.use('/post',PostRoutes);
 
 io.on('connection', function(socket) {
     console.log('A user connected');
